@@ -1,8 +1,37 @@
-{% if question %}
-  <ul>
-      <li>{{question.question_text}}</li>
-      <li>{{answer.answer_text}}</li>
-  </ul>
-{% else %}
-  <p> No Questions Available </p>
-{% endif %}
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Random Q & A</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style>
+      body {
+        background-color: #000000;
+        }
+
+      h1 {
+        font-family: "Helvetica";
+        color: #61F7AE;
+        text-align: center;
+      }
+
+      p {
+        font-family: "Helvetica";
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    {% if question %}
+      <h1>{{question.question_text}}</h1>
+      <p>{{answer.answer_text}}</p>
+    {% else %}
+      <p> No Questions Available </p>
+    {% endif %}
+  </body>
+</html>
